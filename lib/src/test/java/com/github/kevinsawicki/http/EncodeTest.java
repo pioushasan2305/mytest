@@ -67,13 +67,12 @@ public class EncodeTest {
 
   }
   @Test
-  public void loop()
-  {
-        int x=8;
-        String str1="Test";
-        for(int i=0;i<x;i++)
-        {
-          str1.concat(" "+i);
-        }
+  public void loop() {
+    int x = 8;
+    String str1 = "Test";
+    for (int i = 0; i < x; i++) {
+      str1 = str1 + "a"; 
+      System.out.println(str1.length());
+    }
   }
 }
