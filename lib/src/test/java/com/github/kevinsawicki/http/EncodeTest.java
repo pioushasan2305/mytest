@@ -57,11 +57,13 @@ public class EncodeTest {
     if(x==5)
     {
       str1.concat(" Concat");
+
     }
     else {
       StringBuilder sb = new StringBuilder(str1);
       str1 = sb.reverse().toString();
     }
+    System.out.println(str1.length());
 
   }
   @Test
@@ -71,7 +73,7 @@ public class EncodeTest {
         String str1="Test";
         for(int i=0;i<x;i++)
         {
-          System.out.println(str1.length());
+          str1.concat(" "+i);
         }
   }
 }
