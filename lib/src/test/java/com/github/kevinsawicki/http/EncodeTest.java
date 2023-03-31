@@ -77,4 +77,8 @@ public class EncodeTest {
     }
     System.out.println(sum); // print the sum after the loop
   }
+  @Test
+  public void testFactorial() {
+    assertEquals(6, HttpRequest.factorial(3));
+  }
 }
