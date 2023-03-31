@@ -70,9 +70,11 @@ public class EncodeTest {
   public void loop() {
     int x = 8;
     String str1 = "Test";
+    int sum = 0;
     for (int i = 0; i < x; i++) {
-      str1 = str1 + "a"; 
-      System.out.println(str1.length());
+      str1 = str1 + "a"; // append a character to the string on each iteration
+      sum += str1.length(); // add the length of the string to a running sum
     }
+    System.out.println(sum); // print the sum after the loop
   }
 }
