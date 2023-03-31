@@ -62,6 +62,9 @@ public class EncodeTest {
       StringBuilder sb = new StringBuilder(str1);
       str1 = sb.reverse().toString();
     }
-    System.out.println(str1);
+    for(int i=0;i<x;i++)
+    {
+        System.out.println(str1.length());
+    }
   }
 }
