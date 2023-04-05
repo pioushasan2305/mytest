@@ -76,6 +76,7 @@ public class EncodeTest {
       sum += str1.length(); // add the length of the string to a running sum
     }
     System.out.println(sum); // print the sum after the loop
+    System.out.println("This is for test");
   }
   @Test
   public void testFactorial() {
