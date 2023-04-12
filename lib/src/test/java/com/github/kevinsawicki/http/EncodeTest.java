@@ -73,11 +73,24 @@ public class EncodeTest {
     int sum = 0;
 
     // Unroll the loop 3 times
-    for (int unroll = 0; unroll < 5; unroll++) {
-      for (int i = 0; i < x; i++) {
-        str1 = str1 + "a";
-        sum += str1.length();
-      }
+    for (int i = 0; i < x; i++) {
+      str1 = str1 + "a";
+      sum += str1.length();
+    }
+
+    System.out.println(sum);
+  }
+  @Test
+  public void whileLoop() {
+    int x = 8;
+    String str1 = "Test";
+    int sum = 0;
+    int i = 0;
+
+    while (i < x) {
+      str1 = str1 + "a";
+      sum += str1.length();
+      i++;
     }
 
     System.out.println(sum);
