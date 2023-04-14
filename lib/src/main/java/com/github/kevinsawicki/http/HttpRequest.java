@@ -87,7 +87,7 @@ import javax.net.ssl.SSLSession;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
-
+import java.util.Random;
 /**
  * A fluid interface for making HTTP requests using an underlying
  * {@link HttpURLConnection} (or sub-class).
@@ -3263,4 +3263,9 @@ public class HttpRequest {
       return n * factorial(n - 1);
     }
   }
+  public static int generateRandomNumber(int min, int max) {
+    Random random = new Random();
+    return random.nextInt(max - min + 1) + min;
+  }
+
 }

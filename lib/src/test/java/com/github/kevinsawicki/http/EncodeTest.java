@@ -21,6 +21,7 @@
  */
 package com.github.kevinsawicki.http;
 
+import static com.github.kevinsawicki.http.HttpRequest.generateRandomNumber;
 import static org.junit.Assert.assertEquals;
 
 import com.github.kevinsawicki.http.HttpRequest.HttpRequestException;
@@ -52,18 +53,22 @@ public class EncodeTest {
   }
   @Test
   public void condition() {
-    int x=5;
+    int x=generateRandomNumber(1, 10);;
     String str1="Test";
-    if(x==5)
+    if(x<5)
     {
       str1.concat(" Concat");
-
+    }
+    else if(x==7)
+    {
+      System.out.println(str1.length());
     }
     else {
       StringBuilder sb = new StringBuilder(str1);
       str1 = sb.reverse().toString();
+      System.out.println(str1);
     }
-    System.out.println(str1.length());
+
 
   }
   @Test
