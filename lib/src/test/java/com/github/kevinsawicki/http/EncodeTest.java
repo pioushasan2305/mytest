@@ -68,16 +68,36 @@ public class EncodeTest {
       str1 = sb.reverse().toString();
       System.out.println(str1);
     }
-
-
   }
+  @Test
+  public void nestedCondition() {
+    int x = generateRandomNumber(1, 10);
+    String str1 = "Test";
+    if (x < 5) {
+      if (str1.length() < 5) {
+        System.out.println(str1.toUpperCase());
+      } else {
+        System.out.println(str1.toLowerCase());
+      }
+    } else {
+      if (x == 7) {
+        System.out.println(str1.length());
+      } else {
+        StringBuilder sb = new StringBuilder(str1);
+        if (x % 2 == 0) {
+          sb.reverse();
+        }
+        str1 = sb.toString();
+        System.out.println(str1);
+      }
+    }
+  }
+
   @Test
   public void loop() {
     int x = 8;
     String str1 = "Test";
     int sum = 0;
-
-    // Unroll the loop 3 times
     for (int i = 0; i < x; i++) {
       str1 = str1 + "a";
       sum += str1.length();
@@ -100,6 +120,20 @@ public class EncodeTest {
 
     System.out.println(sum);
   }
+  @Test
+  public void nestedLoop() {
+    int x = 8;
+    String str1 = "Test";
+    int sum = 0;
+    for (int i = 0; i < x; i++) {
+      for (int j = 0; j < i + 1; j++) {
+        str1 = str1 + "a";
+        sum += str1.length();
+      }
+    }
+    System.out.println(sum);
+  }
+
   @Test
   public void testFactorial() {
     assertEquals(6, HttpRequest.factorial(3));
