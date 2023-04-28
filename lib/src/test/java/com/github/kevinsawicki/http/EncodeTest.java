@@ -159,7 +159,7 @@ public class EncodeTest {
   }
   @Test
   public void nestedLoop() {
-    int x = 8;
+    int x = generateRandomNumber(1, 10);
     String str1 = "Test";
     int sum = 0;
     for (int i = 0; i < x; i++) {
