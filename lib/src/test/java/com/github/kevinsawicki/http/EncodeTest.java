@@ -69,6 +69,43 @@ public class EncodeTest {
       System.out.println(str1);
     }
   }
+
+  @Test
+  public void ternaryCondition() {
+    int x = generateRandomNumber(1, 10);
+    String str1 = "Test";
+
+    str1 = x < 5 ? str1.concat(" Concat") : x == 7 ? String.valueOf(str1.length()) : new StringBuilder(str1).reverse().toString();
+
+    System.out.println(str1);
+  }
+  @Test
+  public void switchCondition() {
+    int x = generateRandomNumber(1, 10);
+    String str1 = "Test";
+
+    switch (x) {
+      case 1:
+        str1 = str1.toUpperCase();
+        break;
+      case 2:
+        str1 = str1.substring(1);
+        break;
+      case 3:
+        str1 = str1.replace("e", "E");
+        break;
+      case 4:
+        str1 += " Concat";
+      case 7:
+        System.out.println(str1.length());
+        break;
+      default:
+        StringBuilder sb = new StringBuilder(str1);
+        str1 = sb.reverse().toString();
+        System.out.println(str1);
+        break;
+    }
+  }
   @Test
   public void nestedCondition() {
     int x = generateRandomNumber(1, 10);
